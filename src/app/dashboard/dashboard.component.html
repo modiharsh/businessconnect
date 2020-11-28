@@ -1,0 +1,131 @@
+<div class="container">
+    <div class="page-title">
+        <span class="page-title-item">Home</span>
+        <span class="dot-spacer">.</span>
+        <span class="page-title-item">Dashboards</span>
+        <span class="dot-spacer">.</span>
+        <span class="page-title-curr-item">Dashboard Alpha</span>        
+    </div>
+    <strong class="dashboard-titles">Today Statistics</strong>
+    <div class="cards-container">
+        <div class="small-cards-row">
+            <mat-card class="card">
+                
+                <div class="card-content">
+                    <div class="small-card-result">7</div>
+                    <div class="small-card-label">Jobs In Progress</div>
+                    <div class="small-card-graph"><app-small-bar-chart></app-small-bar-chart></div>
+                </div>
+                
+            </mat-card>
+        </div>
+        <div class="small-cards-row">
+            <mat-card class="card">
+                <div class="card-content">
+                    <div class="small-card-result">3</div>
+                    <div class="small-card-label">Jobs Failed</div>
+                    <div class="small-card-graph"><app-small-line-chart2></app-small-line-chart2> </div>
+                </div>
+            </mat-card>
+        </div>
+        <div class="small-cards-row">
+            <mat-card class="card">
+                <div class="card-content">
+                    <div class="small-card-result">12</div>
+                    <div class="small-card-label">Reports Generated</div>
+                    <div class="small-card-graph"><app-small-line-chart3></app-small-line-chart3></div>
+                </div>
+            </mat-card>
+        </div>
+        
+    </div>
+    <strong class="dashboard-titles">LAST MONTH STATISTICS</strong>
+    <div class="normal-cards">
+        <div class="cards-container">
+            <div class="normal-cards-row">
+                <mat-card class="card">
+                    <div class="normal-card-content">
+                        <div class="normal-card-result">8,21,247</div>
+                        <div class="normal-card-label">Records loaded</div>
+                        <div class="normal-card-graph"><app-line-chart1></app-line-chart1> </div>
+                    </div>
+                </mat-card>
+            </div>
+            <div class="normal-cards-row">
+                <mat-card class="card">
+                    <div class="normal-card-content">
+                        <div class="normal-card-result">+16%</div>
+                        <div class="normal-card-label">Avg RWA Variance</div>
+                        <div class="normal-card-graph"><app-line-chart2></app-line-chart2> </div>
+                    </div>
+                </mat-card>
+            </div>
+            <div class="normal-cards-row">
+                <mat-card class="card">
+                    <div class="normal-card-content">
+                        <div class="normal-card-result">316</div>
+                        <div class="normal-card-label">Snapshots Completed</div>
+                        <div class="normal-card-graph"><app-line-chart3></app-line-chart3> </div>
+                    </div>
+                </mat-card>
+            </div>
+            <div class="normal-cards-row">
+                <mat-card class="card">
+                    <div class="normal-card-content">
+                        <div class="normal-card-result">48</div>
+                        <div class="normal-card-label">Adjustments</div>
+                        <div class="normal-card-graph"><app-line-chart2></app-line-chart2> </div>
+                    </div>
+                </mat-card>
+            </div>
+            
+        </div>
+    </div>
+    <div class="tables" style="height: 350px;">
+        <div class="cards-container">
+            <div class="table-cards-row">
+                <mat-card class="card">
+                    <div class="table-card-content">
+                        <div class="card-title">
+                            <div class="card-title-header"><strong>BATCH DETAILS</strong></div>
+                            <div class="card-title-details">Daily batch job status</div>
+                        </div>
+                        <div class="card-body">
+                            <mat-table [dataSource]="dataSource">
+                                <ng-container matColumnDef="id">
+                                    <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
+                                    <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+                                </ng-container>
+                                <ng-container matColumnDef="name">
+                                    <mat-header-cell *matHeaderCellDef> Job Name </mat-header-cell>
+                                    <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+                                </ng-container>
+                                <ng-container matColumnDef="source">
+                                    <mat-header-cell *matHeaderCellDef> Source </mat-header-cell>
+                                    <mat-cell *matCellDef="let row"> {{row.source}} </mat-cell>
+                                </ng-container>
+                                <ng-container matColumnDef="status">
+                                    <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+                                    <mat-cell *matCellDef="let row"> {{row.status}} </mat-cell>
+                                </ng-container>
+                                <ng-container matColumnDef="start">
+                                    <mat-header-cell *matHeaderCellDef> Start Time </mat-header-cell>
+                                    <mat-cell *matCellDef="let row"> {{row.start}} </mat-cell>
+                                </ng-container>
+                                <ng-container matColumnDef="end">
+                                    <mat-header-cell *matHeaderCellDef> End Time </mat-header-cell>
+                                    <mat-cell *matCellDef="let row"> {{row.end}} </mat-cell>
+                                </ng-container>
+                                
+                                <mat-header-row *matHeaderRowDef="['id', 'name', 'source','status','start','end']"></mat-header-row>
+                                <mat-row *matRowDef="let row; columns: ['id', 'name', 'source','status','start','end']"></mat-row>
+                            </mat-table>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+
+    <strong class="dashboard-titles">Extra</strong>
+</div>

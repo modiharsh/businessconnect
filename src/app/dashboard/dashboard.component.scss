@@ -1,0 +1,193 @@
+.page-title{
+    margin:20px;
+   
+}
+.page-title-item{
+    padding-right:8px;
+}
+.page-title-curr-item{
+    font-weight: bold;
+    color:#141322;
+}
+.dot-spacer{
+    padding-right:8px;
+    display: inline-block;
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+    
+}
+
+.dashboard-titles{
+    font-size:16px;
+    color:#141322;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin:20px;
+}
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin:20px;
+        
+}
+.small-cards-row{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    display:block;
+    flex: 0 0 33.333333%;
+    max-width: 30%;
+}
+.cards{
+    margin-bottom: 2rem;
+    background: #fff;
+    border-color: #e4e9f0;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 0 4px 10px 0 rgba(20,19,34,.03), 0 0 10px 0 rgba(20,19,34,.02);
+}
+
+.normal-cards-row{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    display:block;
+    flex: 0 0 25%;
+    max-width: 22%;
+}
+
+.card-content{
+    flex: 1 1 auto;
+    min-height: 1px;
+    min-width: 250px;
+    background: transparent;
+    padding: 18px 24px;
+    position: relative!important;
+    overflow: hidden!important;
+    display: block;
+
+}
+.small-card-result{
+    font-size: 36px;
+    font-family: "Mukta", sans-serif;
+    font-weight: 700!important;
+    color: #141322!important;
+    margin-bottom: -7.5px!important;
+}
+.small-card-label{
+    text-transform: uppercase!important;
+    color: #595c97;
+    font-size: 15px;
+    font-family: "Mukta", sans-serif;
+}
+.small-card-graph{
+    height: 100%;
+    width: 180px;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+}
+.mat-card{
+    padding:0 0!important;
+    border: 1px solid rgba(0,0,0,.125)!important;
+    border-radius: 6px!important;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px 0 rgba(20,19,34,.03), 0 0 10px 0 rgba(20,19,34,.02)!important;
+    margin-bottom: 32px;
+    
+}
+.normal-card-content{
+    flex: 1 1 auto;
+    min-height: 150px;
+    
+    background: transparent;
+    padding: 18px 24px;
+    position: relative!important;
+    overflow: hidden!important;
+    display: block;
+
+}
+.normal-card-result{
+    font-size: 24px;
+    font-family: "Mukta", sans-serif;
+    font-weight: 700!important;
+    color: #141322!important;
+    
+}
+.normal-card-graph{
+    width: 100%;
+    height: 100%;
+    margin-top:15px;
+
+}
+.normal-card-label{
+    color:#595c97;
+    font-size:15px;
+    font-family: "Mukta", sans-serif;
+}
+
+
+.table-cards-row{
+    position: relative;
+    width: 95%;
+    height: 100px;
+    padding-right: 15px;
+    padding-left: 15px;
+    display:block;
+    flex:0 0 100%;
+    max-width: 95%;
+    
+}
+
+.mat-table{
+    color: #595c97!important;
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+}
+.mat-cell{
+    color: #595c97!important;
+    font-family: "Mukta", sans-serif;
+    font-size: 14px;
+}
+.mat-header-cell{
+    color: #595c97!important;
+    font-family: "Mukta", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    background: #f0f2f4;
+    border-bottom: 1px solid #e4e9f0;
+    transition: background .3s ease;
+}
+.card-title-details{
+    color: #a1a1c2!important;
+    font-family: "Mukta", sans-serif;
+    font-size: 15px;
+}
+.card-title-header{
+    font-family: "Mukta", sans-serif;
+    font-size: 16.95px;
+    
+}
+.card-title{
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    padding: 18px 24px;
+}
+.card-body{
+    padding: 18px 24px;
+}

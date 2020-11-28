@@ -1,0 +1,217 @@
+<div class="header">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="opened = !opened">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="app-name">Business Connect</span>
+  <span class="example-spacer"></span>
+  
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with notifications icon">
+    <mat-icon class="material-icons-outlined"  >notifications</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with account_circle icon">
+    <mat-icon class="material-icons-outlined" matBadge="5" matBadgeSize="small">account_circle</mat-icon>
+  </button>
+</div>
+  
+  <mat-sidenav-container >
+    <mat-sidenav [opened]="opened" mode="side" [class.close]="!opened">
+      
+      <mat-nav-list>
+       
+          <span *ngIf="opened" class="menu-group-title">Dashboards</span>
+        
+          <mat-expansion-panel [hideToggle]="!opened" [disabled]="!opened" >
+            
+            <mat-expansion-panel-header *ngIf="opened">
+              <mat-panel-title>
+                <div class="item" >
+                  <button mat-icon-button>
+                      <mat-icon mat-list-icon >home</mat-icon>
+                  </button>
+                  <a *ngIf="opened">Dashboard</a>
+                </div>
+              </mat-panel-title>
+            </mat-expansion-panel-header> 
+            <mat-expansion-panel-header *ngIf="!opened">
+              <mat-panel-title>
+                <div class="item" >
+              <button mat-icon-button [matMenuTriggerFor]="dashboardsMenu">
+                <mat-icon mat-list-icon matTooltip="Dashboard" matTooltipPosition="after" [matTooltipDisabled]="opened" >home</mat-icon>
+            </button>
+          </div>
+        </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-list-item >
+              <div class="itemmm">
+                <a >Dashboard Alpha</a>
+              </div>
+            </mat-list-item>
+            <mat-list-item >
+              <div class="itemmm">
+                <a >Dashboard Beta</a>
+              </div>
+            </mat-list-item>
+            <mat-menu #dashboardsMenu="matMenu" xPosition="after">
+              <button mat-menu-item>
+                <span>Dashboard Alpha</span>
+              </button>
+              <button mat-menu-item >
+                <span>Dashboard Beta</span>
+              </button>
+              
+            </mat-menu>
+
+          </mat-expansion-panel>
+          
+          <span *ngIf="opened" class="menu-group-title">Batch</span>
+          
+          <mat-divider *ngIf="!opened" class="mat-menu-divider" style="bottom: calc(50%); width: 53px;"></mat-divider>
+          <mat-expansion-panel [hideToggle]="!opened"  disabled>
+            
+            <mat-expansion-panel-header >
+              <mat-panel-title>
+                <div class="item" >
+                  <button mat-icon-button>
+                      <mat-icon mat-list-icon matTooltip="FRTB" matTooltipPosition="after" [matTooltipDisabled]="opened" >anchor</mat-icon>
+                  </button>
+                  <a *ngIf="opened">FRTB</a>
+                </div>
+              </mat-panel-title>
+            </mat-expansion-panel-header> 
+            
+
+          </mat-expansion-panel>
+          
+            <span *ngIf="opened" class="menu-group-title">Data</span>
+          
+          <mat-divider *ngIf="!opened" class="mat-menu-divider" style="bottom: calc(50%); width: 53px;"></mat-divider>
+
+          <mat-expansion-panel [hideToggle]="!opened"  disabled>
+            
+            <mat-expansion-panel-header >
+              <mat-panel-title>
+                <div class="item" >
+                  <button mat-icon-button>
+                      <mat-icon mat-list-icon matTooltip="Metadata" matTooltipPosition="after" [matTooltipDisabled]="opened">assignment</mat-icon>
+                  </button>
+                  <a *ngIf="opened">Metadata</a>
+                </div>
+              </mat-panel-title>
+            </mat-expansion-panel-header> 
+            
+
+          </mat-expansion-panel>
+
+          <mat-expansion-panel [hideToggle]="!opened"  [disabled]="!opened">
+            
+            <mat-expansion-panel-header >
+              <mat-panel-title>
+                <div class="item" >
+                  <button mat-icon-button>
+                    <mat-icon mat-list-icon *ngIf="opened" >create</mat-icon>
+                    <mat-icon mat-list-icon *ngIf="!opened" [matMenuTriggerFor]="userDataMenu" matTooltip="Data Manager" matTooltipPosition="after" [matTooltipDisabled]="opened" >create</mat-icon>
+                  </button>
+                  <a *ngIf="opened">Data Manager</a>
+                </div>
+              </mat-panel-title>
+            </mat-expansion-panel-header> 
+            <mat-list-item >
+              <div class="itemmm">
+                <a >Capital Query</a>
+              </div>
+            </mat-list-item>
+            <mat-list-item >
+              <div class="itemmm">
+                <a >User Adjustment</a>
+              </div>
+            </mat-list-item>
+            <mat-list-item >
+              <div class="itemmm">
+                <a >Ref Data Manager</a>
+              </div>
+            </mat-list-item>
+            <mat-menu #userDataMenu="matMenu" xPosition="after">
+              <button mat-menu-item>
+                <span>Capital Query</span>
+              </button>
+              <button mat-menu-item >
+                <span>User Adjustment</span>
+              </button>
+              <button mat-menu-item>
+                <span>Ref Data Manager</span>
+              </button>
+            </mat-menu>
+
+          </mat-expansion-panel>
+
+          <mat-expansion-panel [hideToggle]="!opened"  disabled>
+            
+            <mat-expansion-panel-header >
+              <mat-panel-title>
+                <div class="item" >
+                  <button mat-icon-button>
+                      <mat-icon mat-list-icon matTooltip="Rule Engine" matTooltipPosition="after" [matTooltipDisabled]="opened">bolt_energy</mat-icon>
+                  </button>
+                  <a *ngIf="opened">Rule Engine</a>
+                </div>
+              </mat-panel-title>
+            </mat-expansion-panel-header> 
+          
+          </mat-expansion-panel>
+          
+            <span *ngIf="opened" class="menu-group-title">Analytics</span>
+          
+          <mat-divider *ngIf="!opened" class="mat-menu-divider" style="bottom: calc(50%); width: 53px;"></mat-divider>
+          <mat-expansion-panel hideToggle disabled >
+            
+            <mat-expansion-panel-header  >
+              <mat-panel-title>
+                <div class="item" >
+                  <button mat-icon-button>
+                      <mat-icon mat-list-icon matTooltip="Reports" matTooltipPosition="after" [matTooltipDisabled]="opened">bar_chart</mat-icon>
+                  </button>
+                  <a *ngIf="opened">Reports</a>
+                </div>
+              </mat-panel-title>
+            </mat-expansion-panel-header> 
+          
+          </mat-expansion-panel>
+          
+          <span *ngIf="opened" class="menu-group-title" >Admin</span>
+          
+          <mat-divider *ngIf="!opened" class="mat-menu-divider" style="bottom: calc(50%); width: 53px;"></mat-divider> 
+          <mat-expansion-panel [hideToggle]="!opened"  disabled>
+            
+            <mat-expansion-panel-header >
+              <mat-panel-title>
+                <div class="item" >
+                  <button mat-icon-button>
+                      <mat-icon mat-list-icon matTooltip="Settings" matTooltipPosition="after" [matTooltipDisabled]="opened">settings</mat-icon>
+                  </button>
+                  <a *ngIf="opened">Settings</a>
+                </div>
+              </mat-panel-title>
+            </mat-expansion-panel-header> 
+          
+          </mat-expansion-panel>
+        
+        
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content [class.close]="!opened">
+      <mat-divider></mat-divider>
+      
+      <app-dashboard></app-dashboard>
+      <button mat-mini-fab class="popup-buttons" matTooltip="Settings" matTooltipPosition="left" style="bottom: calc(50% + 120px);">
+        <mat-icon class="material-icons-outlined">settings</mat-icon>
+      </button>
+      <button mat-mini-fab class="popup-buttons" matTooltip="Help" matTooltipPosition="left" style="bottom: calc(50% + 60px);">
+        <mat-icon class="material-icons-outlined">help_outline</mat-icon>
+      </button>
+      <button mat-mini-fab class="popup-buttons" matTooltip="favourites" matTooltipPosition="left" style="bottom: calc(50%);">
+        <mat-icon class="material-icons-outlined">star_border</mat-icon>
+      </button>
+      
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
